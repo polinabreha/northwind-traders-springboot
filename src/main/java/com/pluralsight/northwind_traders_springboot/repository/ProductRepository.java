@@ -3,6 +3,8 @@ package com.pluralsight.northwind_traders_springboot.repository;
 import com.pluralsight.northwind_traders_springboot.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.math.BigDecimal;
 import java.util.List;
 
 @Repository
@@ -10,4 +12,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     List<Product> findByName(String name);
     List<Product> findByProductId(Integer productId);
+    List<Product> findByProductCategory(String category);
+    List<Product> findByProductPrice(BigDecimal price);
+
 }
