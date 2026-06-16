@@ -9,17 +9,17 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int productId;
+    private int id;
     private String name;
     private String category;
     private BigDecimal price;
 
     public int getProductId() {
-        return productId;
+        return id;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setProductId(int id) {
+        this.id = id;
     }
 
     public String getName() {
