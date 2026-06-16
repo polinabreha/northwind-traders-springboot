@@ -1,7 +1,6 @@
 package com.pluralsight.northwind_traders_springboot.model;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
 import java.math.BigDecimal;
 
 @Entity
