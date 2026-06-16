@@ -21,7 +21,7 @@ public class ProductsController {
     public List<Products> getProducts(){return productService.getAllProducts();}
 
     @GetMapping("/{id}")
-    public ResponseEntity<Products> getProductById(@PathVariable int id){
+    public ResponseEntity<Products> getProductById(@PathVariable long id){
         return productService.getProductById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -33,7 +33,7 @@ public class ProductsController {
     }
 
     @GetMapping("/category/{category}")
-    public List<Products> getProductsByCategory(@PathVariable String category){
+    public List<Products> getProductsByCategory(@PathVariable Integer category){
         return productService.getProductByCategory(category);
     }
 

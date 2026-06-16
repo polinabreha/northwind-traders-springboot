@@ -18,7 +18,7 @@ public class ProductsService {
 
     public List<Products> getAllProducts(){return productsRepository.findAll();}
 
-    public Optional<Products> getProductById(int id){return productsRepository.findById(id);}
+    public Optional<Products> getProductById(Long id){return productsRepository.findById(id);}
 
     public Products createProducts(Products product){return productsRepository.save(product);}
 
@@ -28,7 +28,7 @@ public class ProductsService {
 
     public List <Products> getProductByName(String name){return productsRepository.findByName(name);}
 
-    public List <Products> getProductByCategory(String category){return productsRepository.findByCategory(category);}
+    public List <Products> getProductByCategory(int category){return productsRepository.findByCategory(category);}
 
     public List <Products> getProductByPrice (BigDecimal price){return productsRepository.findByPrice(price);}
 

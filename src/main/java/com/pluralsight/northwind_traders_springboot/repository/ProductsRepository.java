@@ -12,7 +12,7 @@ import java.util.Optional;
 public interface ProductsRepository extends JpaRepository<Products, Long> {
 
     List<Products> findByName(String name);
-    List<Products> findByCategory(String category);
+    List<Products> findByCategory(Integer category);
     List<Products> findByPrice(BigDecimal price);
-    Optional<Products> findById(long id);
+    Optional<Products> findById(Long id);
 }

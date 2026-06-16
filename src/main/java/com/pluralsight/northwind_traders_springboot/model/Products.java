@@ -12,23 +12,23 @@ public class Products {
 
     @Column(name = "ProductID")
     @JsonProperty("id")
-    private long id;
+    private Long id;
     @Column(name = "ProductName")
     @JsonProperty("name")
     private String name;
     @Column(name = "CategoryID")
     @JsonProperty("category")
-    private String category;
+    private int category;
     @Column(name = "UnitPrice")
     @JsonProperty("price")
     private BigDecimal price;
 
 
-    public long getProductId() {
+    public Long getId() {
         return id;
     }
 
-    public void setProductId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -40,11 +40,11 @@ public class Products {
         this.name = name;
     }
 
-    public String getCategory() {
+    public int getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(int category) {
         this.category = category;
     }
 
