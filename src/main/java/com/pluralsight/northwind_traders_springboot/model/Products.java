@@ -1,24 +1,34 @@
 package com.pluralsight.northwind_traders_springboot.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "product")
-public class Product {
+@Table(name = "Products")
+public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int id;
+    @Column(name = "ProductID")
+    @JsonProperty("id")
+    private long id;
+    @Column(name = "ProductName")
+    @JsonProperty("name")
     private String name;
+    @Column(name = "CategoryID")
+    @JsonProperty("category")
     private String category;
+    @Column(name = "UnitPrice")
+    @JsonProperty("price")
     private BigDecimal price;
 
-    public int getProductId() {
+
+    public long getProductId() {
         return id;
     }
 
-    public void setProductId(int id) {
+    public void setProductId(long id) {
         this.id = id;
     }
 
